@@ -6,19 +6,20 @@ import './assets/index.css';
 class App extends Component {
 
   constructor(){
-    super()
+    super();
+
     this.state = {
       notas:[]
     }
   }
 
   criarNota(titulo, texto){
-    const novaNota = {titulo, texto}
+    const novaNota = {titulo, texto};
     const novoArrayNotas = [...this.state.notas,novaNota]
     const novoEstado = {
       notas:novoArrayNotas
     }
-    this.setState(novaNota)
+    this.setState(novoEstado)
   }
 
   render() {
@@ -31,4 +32,5 @@ class App extends Component {
   }
 }
 
+//new ListaDeNotas({notas:this.notas})
 export default App;
